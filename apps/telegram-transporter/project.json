@@ -1,0 +1,24 @@
+{
+  "name": "telegram-transporter",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/telegram-transporter/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "telegram-transporter:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "telegram-transporter:build:development"
+        },
+        "production": {
+          "buildTarget": "telegram-transporter:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
